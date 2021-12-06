@@ -1,0 +1,120 @@
+//----------------------------------ABOUT
+.about{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   padding: 7rem 2rem;
+   background: $color-secondary;
+
+   &__text{
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 400px;
+      margin-left: auto;
+   }
+   &__title{
+      padding-bottom: .2rem;
+      width: fit-content;
+      color: $color-text-b;
+      border-bottom: .1rem solid $color-text-b;
+   }
+   &__paragraph{}
+   &__button{
+      padding: .5rem 1rem;
+      width: fit-content;
+      color: white;
+      background: $color-text-b;
+      border: 0;
+      cursor: pointer;
+   }
+   &__animation{
+      max-width: 400px;
+      text-align: right;
+   }
+   &__circle{
+      box-shadow: 0 0 3rem $color-main, 0 0 3rem 5rem inset rgba(0,0,0,.3);
+      width: 20rem;
+      height: 20rem;
+      margin-left: auto;
+      border-radius: 50%;
+
+      .cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9 {
+        fill: none;
+      //   stroke-miterlimit: 10;
+      }
+      .cls-1,.cls-10,.cls-2,.cls-9 {
+        stroke-width: .2rem;
+      }
+      .cls-11,.cls-3,.cls-4,.cls-7,.cls-8 {
+        stroke-width: .2rem;
+      }
+      #ring1 {
+        stroke: $color-link;
+        animation: 35s rotate1 linear infinite;
+        transform-origin: center center;
+        opacity: .3;
+      }
+      #ring1_2 {
+        stroke: $color-link;
+        animation: 32s rotate1 linear infinite;
+        transform-origin: center center;
+      }
+      #ring2 {
+        stroke: $color-text-b;
+        animation: 40s rotate1 linear infinite;
+        transform-origin: center center;
+      }
+      #ring2_2 {
+         stroke: $color-text-b;
+         animation: 37s rotate1 linear infinite;
+         transform-origin: center center;
+         opacity: .3;
+      }
+      #ring3 {
+        stroke: #737373;
+        filter: drop-shadow(0 0 .2rem black);
+        animation: 45s rotate1 linear infinite;
+        transform-origin: center center;
+        stroke-linecap: round;
+        stroke-width: .5rem;
+        stroke-dasharray: 0 59.53;
+      }
+      #ring3_2 {
+        stroke: #343637;
+        stroke-width: 1rem;
+        transform-origin: center center;
+      }
+      #ring4 {
+        stroke: $color-extra-1;
+        animation: 55s rotate1 linear infinite;
+        transform-origin: center center;
+      }
+      #ring4_2 {
+        stroke: $color-extra-1;
+        animation: 50s rotate1 linear infinite;
+        transform-origin: center center;
+        opacity: .3;
+      }
+      #ring5 {
+        stroke: $color-text;
+        animation: 55s rotate1 linear infinite;
+        transform-origin: center center;
+      }
+      #ring5_2 {
+        stroke: $color-text;
+        animation: 65s rotate1 linear infinite;
+        transform-origin: center center;
+        opacity: .3;
+      }
+      #clock{
+         stroke: $color-text;
+         stroke-linecap: square;
+      }
+      #rotater {
+         stroke: $color-text;
+        animation: 12s rotate1 linear infinite;
+        transform-origin: center center;
+      }
+   }
+}

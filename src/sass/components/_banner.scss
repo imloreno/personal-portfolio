@@ -1,0 +1,73 @@
+//----------------------------------BANNER
+.banner{
+   position: relative;
+   height: 80vh;
+   min-height: 20rem;
+   max-width: 100vw;
+   background: $color-main;
+   user-select: none;
+   overflow: hidden;
+
+   &__title-contaniner{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 2rem ;
+      height: 100%;
+      z-index: 1;
+   }
+   &__title{
+      font-weight: 100;
+      font-size: 12rem;
+      word-spacing: 0rem;
+      letter-spacing: 1rem;
+      color: $color-text-b;
+
+      &--bg{
+         color: $color-main;
+         background: $color-text;
+      }
+   }
+   &__subtitle{
+      padding: .5rem 1.2rem;
+      font-size: 1.5rem;
+      letter-spacing: 1.5rem;
+      font-family: monospace;
+   }
+   &__photo{
+      position: absolute;
+      margin-left: auto;
+      height: 100%;
+      bottom: 0;
+      right: 0;
+
+      &-img{
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+         object-position: bottom;
+      }
+
+      &::after{
+         position: absolute;
+         content: '';
+         width: 100%;
+         height: 100%;
+         top: 0;
+         right: 0;
+         background-image: linear-gradient(-90deg, $color-main, transparent 80%);
+      }
+   }
+   &::after{
+      position: absolute;
+      content: '';
+      bottom: 0rem;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border: 2rem solid transparent;
+      border-bottom-color: $color-secondary;
+      transform: translateX(-50%);
+   }
+}
