@@ -1,11 +1,13 @@
 //----------------------------------ABOUT
 .about{
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   padding: 7rem 2rem;
-   background: $color-secondary;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 7rem 2rem;
+  background: $color-secondary;
+  will-change: transform;
 
-   &__text{
+   .about__text{
       display: flex;
       gap: 1rem;
       flex-direction: column;
@@ -13,14 +15,14 @@
       max-width: 400px;
       margin-left: auto;
    }
-   &__title{
+   .about__title{
       padding-bottom: .2rem;
       width: fit-content;
       color: $color-text-b;
       border-bottom: .1rem solid $color-text-b;
    }
-   &__paragraph{}
-   &__button{
+   .about__paragraph{}
+   .about__button{
       padding: .5rem 1rem;
       width: fit-content;
       color: white;
@@ -28,12 +30,11 @@
       border: 0;
       cursor: pointer;
    }
-   &__animation{
+   .about__animation{
       max-width: 400px;
       text-align: right;
    }
-   &__circle{
-      box-shadow: 0 0 3rem $color-main, 0 0 3rem 5rem inset rgba(0,0,0,.3);
+   .about__circle{
       width: 20rem;
       height: 20rem;
       margin-left: auto;
@@ -41,7 +42,7 @@
 
       .cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9 {
         fill: none;
-      //   stroke-miterlimit: 10;
+        stroke-miterlimit: 10;
       }
       .cls-1,.cls-10,.cls-2,.cls-9 {
         stroke-width: .2rem;
@@ -51,30 +52,36 @@
       }
       #ring1 {
         stroke: $color-link;
-        animation: 35s rotate1 linear infinite;
+        animation: 35s rotate1 linear infinite paused;
+        will-change: transform;
         transform-origin: center center;
         opacity: .3;
       }
       #ring1_2 {
         stroke: $color-link;
-        animation: 32s rotate1 linear infinite;
+        animation: 32s rotate1 linear infinite paused;
+        will-change: transform;
         transform-origin: center center;
       }
       #ring2 {
         stroke: $color-text-b;
-        animation: 40s rotate1 linear infinite;
+        animation: 40s rotate1 linear infinite paused;
+        will-change: transform;
         transform-origin: center center;
       }
       #ring2_2 {
          stroke: $color-text-b;
-         animation: 37s rotate1 linear infinite;
+         animation: 37s rotate1 linear infinite paused;
+        will-change: transform;
          transform-origin: center center;
          opacity: .3;
       }
       #ring3 {
         stroke: #737373;
+        animation: 45s rotate1 linear infinite paused;
         filter: drop-shadow(0 0 .2rem black);
-        animation: 45s rotate1 linear infinite;
+        animation-fill-mode: paused;
+        will-change: transform;
         transform-origin: center center;
         stroke-linecap: round;
         stroke-width: .5rem;
@@ -82,39 +89,100 @@
       }
       #ring3_2 {
         stroke: #343637;
-        stroke-width: 1rem;
-        transform-origin: center center;
+        will-change: transform;
       }
       #ring4 {
         stroke: $color-extra-1;
-        animation: 55s rotate1 linear infinite;
+        animation: 55s rotate1 linear infinite paused;
+        will-change: transform;
         transform-origin: center center;
       }
       #ring4_2 {
         stroke: $color-extra-1;
-        animation: 50s rotate1 linear infinite;
+        animation: 50s rotate1 linear infinite paused;
+        will-change: transform;
         transform-origin: center center;
         opacity: .3;
       }
       #ring5 {
         stroke: $color-text;
-        animation: 55s rotate1 linear infinite;
+        animation: 55s rotate1 linear infinite paused;
+        will-change: transform;
         transform-origin: center center;
       }
       #ring5_2 {
         stroke: $color-text;
-        animation: 65s rotate1 linear infinite;
+        animation: 65s rotate1 linear infinite paused;
+        will-change: transform;
         transform-origin: center center;
         opacity: .3;
       }
       #clock{
          stroke: $color-text;
          stroke-linecap: square;
+         will-change: transform;
       }
       #rotater {
          stroke: $color-text;
-        animation: 12s rotate1 linear infinite;
+         animation: 12s rotate1 linear infinite paused;
+        will-change: transform;
         transform-origin: center center;
       }
+   }
+
+   &:hover{
+     
+    #ring1 {
+      animation-play-state: running;
+    }
+    #ring1_2 {
+      animation-play-state: running;
+      stroke: $color-link;
+    }
+    #ring2 {
+      animation-play-state: running;
+      stroke: $color-text-b;
+    }
+    #ring2_2 {
+      animation-play-state: running;
+       stroke: $color-text-b;
+    }
+    #ring3 {
+      animation-play-state: running;
+      stroke: #737373;
+    }
+    #ring4 {
+      animation-play-state: running;
+      stroke: $color-extra-1;
+    }
+    #ring4_2 {
+      animation-play-state: running;
+      stroke: $color-extra-1;
+    }
+    #ring5 {
+      animation-play-state: running;
+      stroke: $color-text;
+    }
+    #ring5_2 {
+      animation-play-state: running;
+      stroke: $color-text;
+    }
+    #clock{
+      animation-play-state: running;
+       stroke: $color-text;
+    }
+    #rotater {
+      animation-play-state: running;
+       stroke: $color-text;
+    }
+   }
+
+   //Border top
+   #skills__border-top{
+     position: absolute;
+     fill: $color-main;
+     width: 100%;
+     bottom: 0;
+     left: 0;
    }
 }

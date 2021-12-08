@@ -1,0 +1,50 @@
+.skills__logo--html {
+   .animated{
+      transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+      stroke: $color-html-active;
+      stroke-dashoffset: 496;
+      stroke-dasharray: 471;
+      z-index: 2;
+   }
+   .bg-icon{
+      stroke: $color-html;
+      z-index: 1;
+   }
+}
+
+//Text
+.color-html{
+   color: $color-html;
+}
+
+//When de animation is running
+.animation--on{
+
+   .skills__logo--html {
+
+      .animated{
+      filter: drop-shadow(0 0 .1rem $color-html-active);
+      stroke-dashoffset: 100;
+      animation: htmlStroke .6s infinite alternate ease-in;
+      animation-delay: 1s;
+      }
+      
+   }
+   .color-html{
+      color: $color-html-active;
+   }
+}
+
+
+/*-------------------------------*/
+/* Animations */
+/*-------------------------------*/
+
+@keyframes htmlStroke {
+   from{
+      filter: drop-shadow(0 0 .1rem $color-html-active);
+   }
+   to{
+      filter: drop-shadow(0 0 .5rem $color-html-active);
+   }
+}

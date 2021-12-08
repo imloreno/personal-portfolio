@@ -1,0 +1,32 @@
+.skills__logo--sass {
+   .animated {
+      transition: 3s cubic-bezier(0.23, 1, 0.320, 1);
+      stroke: $color-sass-active;
+      z-index: 2;
+      stroke-dasharray: 906;
+      stroke-dashoffset: 910;
+   }
+
+   .bg-icon {
+      stroke: $color-sass;
+      z-index: 1;
+   }
+}
+
+//Text
+.color-sass {
+   color: $color-sass;
+}
+
+//When de animation is running
+.animation--on {
+   .skills__logo--sass {
+      .animated {
+         stroke-dasharray: 1806;
+      }
+   }
+
+   .color-sass {
+      color: $color-sass-active;
+   }
+}

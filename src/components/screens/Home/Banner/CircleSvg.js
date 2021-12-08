@@ -152,7 +152,13 @@ const CircleSvg = () => {
           <path className="cls-4" d="M286.5,394q3.93-1.6,7.76-3.38" />
         </g>
         <g id="ring3_2">
-          <circle className="cls-5" cx="212.06" cy="212.06" r="180" />
+          <circle
+            strokeWidth="1rem"
+            className="cls-5"
+            cx="212.06"
+            cy="212.06"
+            r="180"
+          />
         </g>
         <g id="ring3">
           <circle className="cls-6" cx="212.06" cy="212.06" r="180" />

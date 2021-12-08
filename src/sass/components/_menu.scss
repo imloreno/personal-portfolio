@@ -11,6 +11,7 @@
    top: 0;
    left: 0;
    z-index: 5;
+   will-change: transform;
    
    //Logo Svg
    .menu__logo{
@@ -24,7 +25,7 @@
    }
    
    //Icon Svg
-   &__icon{
+   .menu__icon{
       height: 1.5rem;
       stroke: $color-text;
       cursor: pointer;    
@@ -35,20 +36,21 @@
          stroke-dasharray: 30 54;
          stroke-dashoffset: 30;
       }
-      &--active{
-         stroke: $color-extra-1;
-         
-         .menu__icon-middle{
-            transform: translate(-100%);
-            opacity: 0;
-         }
-         .menu__icon-stroke{
-            stroke-dasharray: 30 56;
-            stroke-dashoffset: 86;
-         }
-      }
+      
       &:hover{
          stroke: $color-extra-1;
+      }
+   }
+   .menu__icon--active{
+      stroke: $color-extra-1;
+      
+      .menu__icon-middle{
+         transform: translate(-100%);
+         opacity: 0;
+      }
+      .menu__icon-stroke{
+         stroke-dasharray: 30 56;
+         stroke-dashoffset: 86;
       }
    }
 

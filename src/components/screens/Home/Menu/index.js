@@ -6,8 +6,7 @@ import LogoMenu from "./LogoMenu";
 import MenuIcon from "./MenuIcon";
 
 const Index = (props) => {
-  const { menu, body, switchState, store } = props;
-  console.log(store);
+  const { menu, body, switchState } = props;
 
   //Add class "body__menu--active" to root screen component
   useEffect(() => {
@@ -26,7 +25,7 @@ const Index = (props) => {
   );
 };
 
-const mapStateToProps = (store) => ({ menu: store.menu, store });
+const mapStateToProps = (store) => ({ menu: store.menu });
 const mapDispatchtoProps = { switchState: switchMenuState };
 
 // export default index;

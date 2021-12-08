@@ -1,11 +1,29 @@
 /*---------------------------*/
 /* THEME 1 */
 /*---------------------------*/
-@mixin theme_1{
-   --color-main: #0e0e0e;
+@mixin theme_1 {
+   // --color-main: #0e0e0e;
+   --color-main: #141414;
    --color-text: #eeeeee;
    --color-secondary: #1b1b19;
    --color-extra-1: #EF233C;
    --color-text-b: #ee5527;
    --color-link: #1C5D99;
+}
+
+@mixin theme_1--logos {
+   --color-html: #462627;
+   --color-html-active: #cf1b24;
+   --color-css: #1e2a2c;
+   --color-css-active: #33dce2;
+   --color-sass: #382238;
+   --color-sass-active: #e741e7;
+   --color-js: #46330c;
+   --color-js-active: #f3aa17;
+   --color-es6: #3d231d;
+   --color-es6-active: #ff641c;
+   --color-react: #212c30;
+   --color-react-active: #61dafb;
+   --color-mysql: rgba(74, 192, 119, 0.096);
+   --color-mysql-active: #46a76b;
 }

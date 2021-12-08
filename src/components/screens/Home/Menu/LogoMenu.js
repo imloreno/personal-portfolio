@@ -20,7 +20,7 @@ const LogoMenu = () => {
                 fill: "none",
                 strokeLinecap: "square",
                 strokeMiterlimit: 10,
-                strokeWidth: 3,
+                strokeWidth: ".3rem",
               }}
             />
             <circle
@@ -31,7 +31,7 @@ const LogoMenu = () => {
                 fill: "none",
                 strokeLinecap: "square",
                 strokeMiterlimit: 10,
-                strokeWidth: 3,
+                strokeWidth: ".3rem",
               }}
             />
           </g>
@@ -46,7 +46,7 @@ const LogoMenu = () => {
               fill: "none",
               strokeLinecap: "square",
               strokeMiterlimit: 10,
-              strokeWidth: 3,
+              strokeWidth: ".3rem",
             }}
           />
         </g>

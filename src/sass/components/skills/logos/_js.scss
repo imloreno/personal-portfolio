@@ -1,0 +1,60 @@
+.skills__logo--js {
+   .animated{
+      transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+      stroke: $color-js-active;
+      opacity: 0;
+      z-index: 2;
+      stroke-dashoffset: 0;
+      stroke-dasharray: 0;
+   }
+   .bg-icon{
+      stroke: $color-js;
+      z-index: 1;
+   }
+}
+
+//Text
+.color-js{
+   color: $color-js;
+}
+
+//When de animation is running
+.animation--on{
+
+   .skills__logo--js {
+      .animated{
+      filter: drop-shadow(0 0 .1rem $color-js-active);
+      stroke-dashoffset: 0;
+      stroke-dasharray: 20;
+      opacity: 1;
+      animation: 5s infinite alternate cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      animation-name: jsAnim, jsAnim2;
+      animation-duration: 2s, 5s;
+      animation-delay: 1s;
+      }
+   }
+   .color-js{
+      color: $color-js-active;
+   }
+}
+/*-------------------------------*/
+/* Animations */
+/*-------------------------------*/
+
+@keyframes jsAnim {
+   from{
+      filter: drop-shadow(0 0 .1rem $color-js-active);
+   }
+   to{
+      filter: drop-shadow(0 0 .5rem $color-js-active);
+   }
+}
+@keyframes jsAnim2 {
+   from{
+      stroke-dashoffset: 0;
+      stroke-dasharray: 20;
+      }
+      to{
+         stroke-dasharray: 80;
+   }
+}

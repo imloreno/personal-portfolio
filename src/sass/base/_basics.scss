@@ -8,6 +8,7 @@
 
 :root{
    @include theme_1;
+   @include theme_1--logos;
 }
 
 #root{
@@ -55,6 +56,9 @@ a{
 /* ANIMATIONS */
 /*---------------------------------*/
 @keyframes rotate1 {
+   from{
+      transform: rotate(0deg);
+   }
    to {
      transform: rotate(360deg);
    }

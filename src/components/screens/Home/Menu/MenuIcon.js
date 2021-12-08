@@ -20,7 +20,7 @@ const MenuIcon = ({ state, switchMenu }) => {
           fill: "none",
           strokeLinecap: "round",
           strokeMiterlimit: "10",
-          strokeWidth: "0.1rem",
+          strokeWidth: "0.12rem",
           overflow: "visible",
           transition: "all 0.7s cubic-bezier(0.5, 0, 0.2, 1)",
         }}
@@ -35,7 +35,7 @@ const MenuIcon = ({ state, switchMenu }) => {
           fill: "none",
           strokeLinecap: "round",
           strokeMiterlimit: "10",
-          strokeWidth: "0.1rem",
+          strokeWidth: "0.12rem",
           transition: "all 0.7s cubic-bezier(0.5, 0, 0.2, 1)",
         }}
       />
@@ -47,7 +47,7 @@ const MenuIcon = ({ state, switchMenu }) => {
           fill: "none",
           strokeLinecap: "round",
           strokeMiterlimit: "10",
-          strokeWidth: "0.1rem",
+          strokeWidth: "0.12rem",
           transition: "all 0.7s cubic-bezier(0.5, 0, 0.2, 1)",
         }}
       />

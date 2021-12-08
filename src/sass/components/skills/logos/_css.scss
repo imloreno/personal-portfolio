@@ -1,0 +1,74 @@
+.skills__logo--css {
+   .animated{
+      transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+      stroke: $color-css-active;
+      opacity: 0;
+      z-index: 2;
+
+      #cssLetter{
+         transition: 1s;
+         opacity: 0;
+      }
+   }
+   .bg-icon{
+      stroke: $color-css;
+      z-index: 1;
+   }
+}
+
+//Text
+.color-css{
+   color: $color-css;
+}
+
+//When de animation is running
+.animation--on{
+
+   .skills__logo--css {
+      .animated{
+      filter: drop-shadow(0 0 .1rem $color-css-active);
+      opacity: 1;
+      animation: cssAnim 3s infinite alternate cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+      #cssLetter{
+         animation: cssAnim2 2.3s infinite;
+         opacity: 0;
+      }
+      }
+   }
+   .color-css{
+      color: $color-css-active;
+   }
+}
+/*-------------------------------*/
+/* Animations */
+/*-------------------------------*/
+
+@keyframes cssAnim {
+   from{
+      filter: drop-shadow(0 0 .1rem $color-css-active);
+   }
+   to{
+      filter: drop-shadow(0 0 .5rem $color-css-active);
+   }
+}
+@keyframes cssAnim2 {
+   72%{
+      opacity: 1;
+   }
+   75%{
+      opacity: 0;
+   }
+   80%{
+      opacity: 1;
+   }
+   87%{
+      opacity: 1;
+   }
+   90%{
+      opacity: 0;
+   }
+   95%{
+      opacity: 1;
+   }
+}
