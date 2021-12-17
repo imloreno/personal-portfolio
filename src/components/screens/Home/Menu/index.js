@@ -6,17 +6,23 @@ import LogoMenu from "./LogoMenu";
 import MenuIcon from "./MenuIcon";
 
 const Index = (props) => {
-  const { menu, body, switchState } = props;
+  const { menu, body, switchState, theme } = props;
 
   //Add class "body__menu--active" to root screen component
   useEffect(() => {
+    const BODY = body.current;
+
     menu.state
-      ? body.current.classList.add("body__menu--active")
-      : body.current.classList.remove("body__menu--active");
-  }, [menu, body]);
+      ? BODY.classList.add("body__menu--active")
+      : BODY.classList.remove("body__menu--active");
+  }, [menu, body, switchState]);
 
   return (
-    <header className={`menu ${menu.state && "menu--active"}`}>
+    <header
+      className={`menu ${menu.state && "menu--active"} ${
+        theme === "light" && "light-theme"
+      }`}
+    >
       <Link to="/">
         <LogoMenu />
       </Link>
@@ -25,7 +31,7 @@ const Index = (props) => {
   );
 };
 
-const mapStateToProps = (store) => ({ menu: store.menu });
+const mapStateToProps = (store) => ({ menu: store.menu, theme: store.theme });
 const mapDispatchtoProps = { switchState: switchMenuState };
 
 // export default index;

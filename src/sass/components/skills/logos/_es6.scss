@@ -32,6 +32,12 @@
          animation-name: es6Anim, es6Anim2;
          animation-duration: 2s, 5s;
          animation-delay: 1s;
+
+
+         .letters {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 0;
+         }
       }
    }
 

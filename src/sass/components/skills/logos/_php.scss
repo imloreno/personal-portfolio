@@ -1,0 +1,57 @@
+.skills__logo--php {
+   .animated {
+      transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+      stroke: transparent;
+      fill: $color-php;
+      stroke-dashoffset: 496;
+      stroke-dasharray: 471;
+      z-index: 2;
+   }
+
+   .bg-icon {
+      stroke: $color-php;
+      fill: $color-php;
+      z-index: 1;
+   }
+}
+
+//Text
+.color-php {
+   color: $color-php;
+}
+
+//When de animation is running
+.animation--on {
+
+   .skills__logo--php {
+
+      .animated {
+         fill: $color-php;
+         stroke: $color-php;
+         filter: drop-shadow(0 0 .1rem $color-php-active);
+         stroke-dashoffset: 100;
+         animation: phpStroke .6s infinite alternate ease-in;
+         animation-delay: 1s;
+      }
+
+   }
+
+   .color-php {
+      color: $color-php-active;
+   }
+}
+
+
+/*-------------------------------*/
+/* Animations */
+/*-------------------------------*/
+
+@keyframes phpStroke {
+   from {
+      filter: drop-shadow(0 0 .1rem $color-php-active);
+   }
+
+   to {
+      filter: drop-shadow(0 0 .5rem $color-php-active);
+   }
+}

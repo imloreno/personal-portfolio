@@ -3,4 +3,10 @@ const switchMenuState = () => ({
   type: "SWITCH_MENU",
 });
 
-export { switchMenuState };
+//Switch theme
+const switchTheme = (payload) => ({
+  type: "SWITCH_THEME",
+  payload,
+});
+
+export { switchMenuState, switchTheme };

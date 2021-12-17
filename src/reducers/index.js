@@ -9,6 +9,12 @@ const reducer = (state, action) => {
         },
       };
     }
+    case "SWITCH_THEME": {
+      return {
+        ...state,
+        theme: action.payload,
+      };
+    }
     default:
       return state;
   }

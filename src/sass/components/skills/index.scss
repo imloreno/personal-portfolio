@@ -1,29 +1,66 @@
 .skills {
+   background: $color-main;
 
    .skills__container {
-      padding: 5rem 1rem;
-      margin: auto;
-      max-width: 900px;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: minmax(25%, auto) 1fr;
+      padding: 5rem 2rem;
 
-      //Title
-      .skills__title-container {
-         padding: 1rem 1rem;
+      //Skill list
+      .skills_list-container {
+         height: 100%;
+         padding: 1rem;
 
-         .skills__title {
-            width: fit-content;
-            padding-bottom: .5rem 0;
-            color: $color-text-b;
-            border-bottom: .1rem solid $color-text-b;
-            will-change: transform;
+         .skills__title-container {
+            margin-bottom: 2rem;
+
+            .skills__title {
+               width: fit-content;
+               padding-bottom: .5rem 0;
+               color: $color-extra-1;
+               border-bottom: .1rem solid $color-extra-1;
+               will-change: transform;
+            }
+         }
+
+         .skills__list {
+            border-left: thin solid rgb(122, 122, 122);
+            padding-left: 1rem;
+
+            .skills__list-item {
+               position: relative;
+               margin-bottom: .5rem;
+               padding: .5rem 1rem;
+               border-radius: .2rem 0 0 .2rem;
+               background: #0a0a0a8a;
+
+               &::before {
+                  position: absolute;
+                  content: '';
+                  width: .3rem;
+                  height: .3rem;
+                  top: 0%;
+                  left: -1.5rem;
+                  transform: translateY(-50%);
+                  background: rgb(122, 122, 122);
+                  border-radius: 50%;
+                  border: .1rem solid rgb(122, 122, 122);
+               }
+            }
          }
       }
 
       //Container
       .skills__items--container {
+         position: sticky;
+         top: 0rem;
          display: flex;
          gap: 1rem;
          flex-wrap: wrap;
-         padding: 1rem 1rem;
+         justify-content: center;
+         padding: 2rem 1rem;
+         height: fit-content;
 
          .skills__item {
             transition: .5s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -31,7 +68,7 @@
             width: 8.5rem;
             height: 12rem;
             background: $color-secondary;
-            border-radius: 1rem;
+            // border-radius: 1rem;
             will-change: transform;
             cursor: pointer;
 
@@ -79,11 +116,9 @@
                top: 0;
                left: 0;
                pointer-events: none;
-               border-radius: 1rem;
-               box-shadow: inset .2rem .2rem .5rem rgba(0, 0, 0, 0.658),
-                  inset -.2rem -.2rem .2rem rgba(0, 0, 0, 0.253),
-                  -.5rem -.5rem 1rem .2rem rgba(63, 63, 63, 0.096);
-               background-image: linear-gradient(-45deg, rgba(17, 17, 17, 0.26), rgba(10, 10, 10, 0.671));
+               // border-radius: 1rem;
+               box-shadow: inset .8em .2rem .5rem rgba(0, 0, 0, 0.562);
+               background-image: linear-gradient(-45deg, rgba(17, 17, 17, 0.671), rgba(10, 10, 10, 0.781));
                transition: .5s cubic-bezier(0.47, 0, 0.745, 0.715);
                will-change: opacity;
             }
@@ -97,7 +132,7 @@
                left: 0;
                opacity: 0;
                pointer-events: none;
-               border-radius: 1rem;
+               // border-radius: 1rem;
                box-shadow: inset .3rem .3rem .5rem rgba(49, 49, 49, 0.377),
                   -.5rem -.5rem 1rem .2rem rgba(49, 49, 49, 0.253),
                   .7rem .7rem 1rem .2rem rgba(0, 0, 0, 0.877);
@@ -123,14 +158,35 @@
       }
    }
 
-   //Border bottom
-   #skills__border-bottom {
-      left: 0;
-      width: 100%;
-      fill: $color-main;
-      fill: grey;
-      transform: rotate(180deg);
-      will-change: transform;
+}
+
+.light-theme {
+
+   .skills__items--container {
+
+      .skills__item {
+         border-radius: 0 !important;
+
+         &::before {
+            opacity: .2;
+            border-radius: 0 !important;
+         }
+
+         &:hover {
+            &::after {
+               opacity: .5;
+               border-radius: 0 !important;
+            }
+         }
+
+      }
+
+   }
+
+
+   .skills__title {
+      color: $color-secondary !important;
+      border-bottom: thin solid $color-secondary !important;
    }
 }
 
@@ -138,4 +194,4 @@
 /*-------------------------*/
 /* Icon style */
 /*-------------------------*/
-@import "./logos"
+@import "./logos";

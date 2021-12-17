@@ -1,30 +1,55 @@
-import BorderIcon from "./BorderIcon";
+import { useState } from "react";
+import { connect } from "react-redux";
 import Logos from "./Logos";
 
-const LOGO_LIST = [
-  { type: "html", title: "HTML" },
-  { type: "css", title: "CSS" },
-  { type: "sass", title: "SASS" },
-  { type: "js", title: "JAVASCRIPT" },
-  { type: "es6", title: "ES6+" },
-  { type: "react", title: "REACT" },
-  { type: "mysql", title: "MYSQL" },
-];
+//Calculate experience in years
+const getExperience = (year) => {
+  const YEAR = new Date().getFullYear();
+  return parseInt(Number(YEAR) - Number(year));
+};
 
-const index = () => {
+const Index = ({ iconList, theme }) => {
+  const [isHover, setIsHover] = useState(false);
+
   return (
-    <section className="skills">
+    <section className={`skills ${theme === "light" && "light-theme"}`}>
       <div className="skills__container">
-        <header className="skills__title-container">
-          <h2 className="skills__title">Habilidades</h2>
-        </header>
+        <div className="skills_list-container">
+          <header className="skills__title-container">
+            <h2 className="skills__title">Habilidades</h2>
+          </header>
+          <ul className="skills__list">
+            {iconList.map((e, index) => (
+              <li
+                key={e.type + index}
+                className="skills__list-item"
+                style={{
+                  borderLeft: `.2rem solid var(--color-${e.type}-active)`,
+                }}
+              >
+                <p>{e.title}</p>
+                <p style={{ opacity: 0.5, fontSize: ".9em" }}>
+                  {getExperience(e.since) <= 0
+                    ? "Menos de un año"
+                    : `Desde ${e.since}`}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
         <div className="skills__items--container">
-          {LOGO_LIST.map((e, index) => (
+          {iconList.map((e, index) => (
             <article
               key={e.title + index}
               className="skills__item"
-              onMouseOver={(e) => e.target.classList.add("animation--on")}
-              onMouseOut={(e) => e.target.classList.remove("animation--on")}
+              onMouseOver={(e) => {
+                e.target.classList.add("animation--on");
+                setIsHover(true);
+              }}
+              onMouseOut={(e) => {
+                e.target.classList.remove("animation--on");
+                setIsHover(false);
+              }}
             >
               <div className="skills__item-content">
                 <div
@@ -32,7 +57,7 @@ const index = () => {
                     "skills__logo--" + e.type
                   }`}
                 >
-                  <Logos type={e.type} className="animated" />
+                  <Logos type={e.type} className="animated" isHover={isHover} />
                   <Logos type={e.type} className="bg-icon" />
                 </div>
                 <h3 className={`skills__titlelogo color-${e.type}`}>
@@ -43,11 +68,14 @@ const index = () => {
           ))}
         </div>
       </div>
-      <div className="skills__border">
-        <BorderIcon id="skills__border-bottom" />
-      </div>
     </section>
   );
 };
 
-export default index;
+const mapStateToProps = (store) => ({
+  iconList: store.iconList,
+  theme: store.theme,
+});
+
+// export default Index;
+export default connect(mapStateToProps, null)(Index);

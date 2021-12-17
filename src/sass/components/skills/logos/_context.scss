@@ -1,10 +1,10 @@
-.skills__logo--react {
+.skills__logo--context {
    .animated {
       z-index: 2;
 
       #center {
          transition: .2s linear;
-         fill: $color-react-active;
+         fill: $color-context-active;
          opacity: 0;
          transform-origin: center;
       }
@@ -13,12 +13,12 @@
       #two,
       #tre {
          transition: .0s linear;
-         stroke: $color-react-active;
-         filter: drop-shadow(0 0 .5rem $color-react-active);
+         stroke: $color-context-active;
+         filter: drop-shadow(0 0 .5rem $color-context-active);
          z-index: 2;
          stroke-dasharray: 50;
          stroke-dashoffset: -286;
-         animation: .3s reactAnim infinite linear;
+         animation: .2s reactAnim infinite linear;
          animation-play-state: paused;
          opacity: 0;
       }
@@ -26,20 +26,20 @@
 
    .bg-icon {
       transition: 1.5s;
-      stroke: $color-react;
-      fill: $color-react;
+      stroke: $color-context;
+      fill: $color-context;
       z-index: 1;
    }
 }
 
 //Text
-.color-react {
-   color: $color-react;
+.color-context {
+   color: $color-context;
 }
 
 //When de animation is running
 .animation--on {
-   .skills__logo--react {
+   .skills__logo--context {
       .animated {
 
          #center {
@@ -60,33 +60,7 @@
       }
    }
 
-   .color-react {
-      color: $color-react-active;
-   }
-}
-
-/*--------------------------*/
-/* ANIMATIONS */
-/*--------------------------*/
-@keyframes reactAnim {
-   from {
-      stroke-dasharray: 50;
-      stroke-dashoffset: -286;
-   }
-
-   to {
-      stroke-dashoffset: -386;
-   }
-}
-
-@keyframes reactAnim2 {
-   from {
-      opacity: 1;
-      transform: scale(.8);
-   }
-
-   to {
-      opacity: .5;
-      transform: scale(1.1);
+   .color-context {
+      color: $color-context-active;
    }
 }

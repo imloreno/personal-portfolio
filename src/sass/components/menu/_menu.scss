@@ -1,5 +1,5 @@
 //----------------------------------MENU
-.menu{
+.menu {
    transition: transform .8s cubic-bezier(0.5, 0, 0.2, 1);
    position: fixed;
    display: flex;
@@ -12,68 +12,52 @@
    left: 0;
    z-index: 5;
    will-change: transform;
-   
+
    //Logo Svg
-   .menu__logo{
+   .menu__logo {
       transition: stroke .2s;
       height: 2.2rem;
       stroke: $color-text;
 
-      &:hover{
+      &:hover {
          stroke: $color-extra-1;
       }
    }
-   
+
    //Icon Svg
-   .menu__icon{
+   .menu__icon {
       height: 1.5rem;
       stroke: $color-text;
-      cursor: pointer;    
+      cursor: pointer;
       overflow: visible;
       z-index: 2;
-      
-      .menu__icon-stroke{
+
+      .menu__icon-stroke {
          stroke-dasharray: 30 54;
          stroke-dashoffset: 30;
       }
-      
-      &:hover{
+
+      &:hover {
          stroke: $color-extra-1;
       }
    }
-   .menu__icon--active{
+
+   .menu__icon--active {
       stroke: $color-extra-1;
-      
-      .menu__icon-middle{
+
+      .menu__icon-middle {
          transform: translate(-100%);
          opacity: 0;
       }
-      .menu__icon-stroke{
+
+      .menu__icon-stroke {
          stroke-dasharray: 30 56;
          stroke-dashoffset: 86;
       }
    }
 
-   &--active{
+   &--active {
       transform: translateX(-15rem);
    }
 
-}
-
-//--------------------------------MENU BODY
-.menu__container{
-   grid-column: 2;
-   grid-row: span 2;
-   width: 15rem;
-   height: 100%;
-   background: $color-extra-1;
-   z-index: 3;
-
-   .menu__list{
-      width: 15rem;
-      height: 100%;
-      right: -15rem;
-      top: 0;
-      text-align: center;
-   }
 }

@@ -1,0 +1,149 @@
+.skills__logo--linux {
+   overflow: hidden;
+
+   .animated {
+      transition: .5s;
+      fill: $color-linux;
+      opacity: 0;
+      z-index: 2;
+
+      #eyes {
+
+         .right,
+         .left {
+            fill: rgba(0, 0, 0, 0.473);
+            transform: translate(-.05rem, .1rem);
+         }
+      }
+
+      #mouth {
+         stroke: $color-linux-active;
+      }
+
+      #foot {
+         stroke: $color-linux-active;
+      }
+   }
+
+   .bg-icon {
+      transition: .5s;
+      fill: $color-linux;
+      z-index: 1;
+
+      #eyes {
+
+         .right,
+         .left {
+            fill: rgba(0, 0, 0, 0.473);
+            transform: translate(-.05rem, .1rem);
+         }
+      }
+
+      #mouth {
+         stroke: $color-linux;
+      }
+
+      #foot {
+         stroke: $color-linux;
+      }
+   }
+}
+
+//Text
+.color-linux {
+   color: $color-linux;
+}
+
+//When de animation is running
+.animation--on {
+   .skills__logo--linux {
+      .animated {
+         opacity: 1;
+         fill: $color-linux-active;
+
+         #eyes {
+
+            animation: 2s linuxAnim infinite alternate;
+
+            .right,
+            .left {
+               animation: 2s linuxAnim2 infinite alternate;
+            }
+         }
+
+         #mouth {
+            animation: 2s linuxAnim infinite alternate;
+
+            #smile {
+               animation: 2s linuxAnim3 infinite alternate;
+            }
+         }
+      }
+
+      .bg-icon {
+         opacity: 0;
+      }
+   }
+
+   .color-linux {
+      color: $color-linux-active;
+   }
+}
+
+/*----------------------------------------*/
+/* Keyframes */
+/*----------------------------------------*/
+
+@keyframes linuxAnim {
+   0% {
+      transform: translateX(0)
+   }
+
+   30% {
+      transform: translateX(-.4rem) rotate(-2deg)
+   }
+
+   80% {
+      transform: translateX(-.4rem) rotate(-2deg)
+   }
+
+   90% {
+      transform: translateX(0)
+   }
+}
+
+@keyframes linuxAnim2 {
+   0% {
+      transform: translate(-.05rem, .1rem);
+   }
+
+   30% {
+      transform: translate(-.2rem, .1rem) rotate(-2deg);
+   }
+
+   80% {
+      transform: translate(-.2rem, .1rem) rotate(-2deg);
+   }
+
+   90% {
+      transform: translate(-.05rem, .1rem);
+   }
+}
+
+@keyframes linuxAnim3 {
+   0% {
+      transform: translate(-39.09px, -27px);
+   }
+
+   30% {
+      transform: translate(-41px, -27px) rotate(-.5deg);
+   }
+
+   80% {
+      transform: translate(-41px, -27px) rotate(-.5deg);
+   }
+
+   90% {
+      transform: translate(-39.09px, -27px);
+   }
+}

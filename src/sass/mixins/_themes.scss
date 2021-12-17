@@ -2,13 +2,12 @@
 /* THEME 1 */
 /*---------------------------*/
 @mixin theme_1 {
-   // --color-main: #0e0e0e;
    --color-main: #141414;
-   --color-text: #eeeeee;
+   --color-text: #cdd3df;
    --color-secondary: #1b1b19;
-   --color-extra-1: #EF233C;
-   --color-text-b: #ee5527;
-   --color-link: #1C5D99;
+   --color-extra-1: #2c7183;
+   --color-text-b: #ffffff;
+   --color-link: #ffffff;
 }
 
 @mixin theme_1--logos {
@@ -24,6 +23,42 @@
    --color-es6-active: #ff641c;
    --color-react: #212c30;
    --color-react-active: #61dafb;
-   --color-mysql: rgba(74, 192, 119, 0.096);
-   --color-mysql-active: #46a76b;
+   --color-mysql: #2c4636;
+   --color-mysql-active: #23af59;
+   --color-router: #4b1122c2;
+   --color-router-active: #b11c3c;
+   --color-redux: #564080c2;
+   --color-redux-active: #873cff;
+   --color-context: #26306bc2;
+   --color-context-active: #263cff;
+   --color-php: #34525ac2;
+   --color-php-active: #6ecaff;
+   --color-git: #532e2eb2;
+   --color-git-active: #ca2222;
+   --color-vscode: #143a50;
+   --color-vscode-active: #2d7ec0;
+   --color-github: #524c18;
+   --color-github-active: #f8e74f;
+   --color-linux: #494949;
+   --color-linux-active: #757575;
+   --color-psd: #263e49;
+   --color-psd-active: #2b76d8;
+   --color-ai: #584431;
+   --color-ai-active: #c77913;
+   --color-figma: #4e3b17;
+   --color-figma-active: #e79222;
+}
+
+/*---------------------------*/
+/* THEME 2 */
+/*---------------------------*/
+
+@mixin theme_2 {
+   --color-main: #504f5e;
+   --color-main: #485761;
+   --color-secondary: #e4e4e4;
+   --color-text: #1b1b1b;
+   --color-extra-1: #2c7183;
+   --color-text-b: #e9e9e9;
+   --color-link: #233444;
 }

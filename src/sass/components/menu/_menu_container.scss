@@ -1,0 +1,64 @@
+//--------------------------------MENU BODY
+.menu__container {
+   grid-column: 2;
+   grid-row: span 2;
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+   width: 15rem;
+   height: 100%;
+   background: $color-extra-1;
+   z-index: 3;
+
+   .menu__clock-container {
+      margin: 2rem auto 0 auto;
+      width: 8rem;
+   }
+
+   .menu__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 15rem;
+      right: -15rem;
+      top: 0;
+      text-align: center;
+
+      .menu__item {
+         padding: .5rem 0;
+         color: $color-text-b;
+      }
+   }
+
+   .menu__settings {
+      padding: 0 1rem 2rem 1rem;
+
+      .menu__settings-icon {
+         padding: .6rem;
+         width: 3rem;
+         height: 3rem;
+         background: rgb(33, 33, 34);
+         border-radius: .5rem;
+         cursor: pointer;
+         user-select: none;
+
+         .icon-theme {
+            transition-delay: .12s;
+            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            fill: #e0ae23;
+            transform: rotate(200deg);
+         }
+      }
+   }
+}
+
+.light-theme {
+   .menu__settings-icon {
+
+      .icon-theme {
+         transition-delay: .12s;
+         fill: rgb(224, 174, 65);
+         transform: rotate(-350deg) !important;
+      }
+   }
+}

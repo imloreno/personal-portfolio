@@ -1,0 +1,47 @@
+.skills__logo--git {
+   .animated {
+      stroke: $color-git-active;
+      animation: 1s gitAnim infinite linear;
+      animation-play-state: paused;
+      transition: .5s;
+      stroke-dasharray: 36;
+      stroke-dashoffset: 0;
+      opacity: 0;
+      z-index: 2;
+   }
+
+   .bg-icon {
+      stroke: $color-git;
+      z-index: 1;
+   }
+}
+
+//Text
+.color-git {
+   color: $color-git;
+}
+
+//When de animation is running
+.animation--on {
+   .skills__logo--git {
+      .animated {
+         opacity: 1;
+         stroke: $color-git-active;
+         animation-play-state: running;
+      }
+   }
+
+   .color-git {
+      color: $color-git-active;
+   }
+}
+
+@keyframes gitAnim {
+   from {
+      stroke-dashoffset: 0;
+   }
+
+   to {
+      stroke-dashoffset: 73;
+   }
+}

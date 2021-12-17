@@ -1,0 +1,59 @@
+.skills__logo--redux {
+   .animated {
+      transition: .5s;
+      stroke: $color-redux;
+      opacity: 0;
+      animation: reduxAnim .5s infinite linear;
+      animation-play-state: paused;
+      stroke-dasharray: 79;
+      stroke-dashoffset: 290;
+      z-index: 2;
+   }
+
+   .bg-icon {
+      transition: 1.5s;
+      stroke: $color-redux;
+      stroke-dasharray: 79;
+      stroke-dashoffset: 290;
+      z-index: 1;
+   }
+}
+
+//Text
+.color-redux {
+   color: $color-redux;
+}
+
+//When de animation is running
+.animation--on {
+   .skills__logo--redux {
+      .animated {
+         opacity: 1;
+         stroke: $color-redux-active;
+         animation-play-state: running;
+         filter: drop-shadow(0 0 .2rem $color-redux-active);
+      }
+
+      .bg-icon {
+         opacity: 0;
+      }
+   }
+
+   //Text
+   .color-redux {
+      color: $color-redux-active;
+   }
+}
+
+/*--------------------------*/
+/* ANIMATIONS */
+/*--------------------------*/
+@keyframes reduxAnim {
+   from {
+      stroke-dashoffset: 290;
+   }
+
+   to {
+      stroke-dashoffset: 130;
+   }
+}

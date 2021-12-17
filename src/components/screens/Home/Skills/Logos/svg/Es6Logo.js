@@ -22,6 +22,7 @@ const Es6Logo = ({ className }) => {
         />
         <g id="letters">
           <polyline
+            className="letters"
             style={{
               fill: "none",
               strokeMiterlimit: "10",
@@ -30,6 +31,7 @@ const Es6Logo = ({ className }) => {
             points="46.7 28.25 46.7 90.25 27 80.74"
           />
           <polyline
+            className="letters"
             style={{
               fill: "none",
               strokeMiterlimit: "10",

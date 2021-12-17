@@ -1,0 +1,17 @@
+.projects {
+   position: relative;
+   color: $color-text;
+   background: $color-secondary;
+   padding: 10rem 2rem;
+
+   //Border bottom
+   #skills__border-bottom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      fill: $color-main;
+      transform: rotate(180deg);
+      will-change: transform;
+   }
+}

@@ -1,0 +1,100 @@
+.skills__logo--vscode {
+   overflow: hidden;
+
+   .animated {
+      fill: $color-vscode-active;
+      transition: .5s;
+      opacity: 0;
+      z-index: 2;
+
+      #shadow {
+         transition: .7;
+         opacity: 0;
+      }
+
+      #icon {
+         transition: .5s;
+         opacity: 0;
+         transform-origin: center;
+      }
+   }
+
+   .bg-icon {
+      transition: .5s;
+      fill: $color-vscode;
+      z-index: 1;
+
+   }
+}
+
+//Text
+.color-vscode {
+   color: $color-vscode;
+}
+
+//When de animation is running
+.animation--on {
+   .skills__logo--vscode {
+      .animated {
+         opacity: 1;
+         stroke: $color-vscode-active;
+
+         #wall {
+            animation: .5s vsAnim ease-out;
+         }
+
+         #shadow {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+            animation: .6s vsAnim2 ease-out;
+         }
+
+         #icon {
+            opacity: 1;
+            animation: 1s vsAnim3 linear infinite alternate-reverse;
+         }
+      }
+
+      .bg-icon {
+         opacity: 0;
+      }
+   }
+
+   .color-vscode {
+      color: $color-vscode-active;
+   }
+}
+
+@keyframes vsAnim {
+   from {
+      transform: translateY(-200%);
+   }
+
+   to {
+      transform: translateY(0%);
+   }
+}
+
+@keyframes vsAnim2 {
+   from {
+      opacity: 0;
+      transform: translate(-30%, 30%) scale(.5);
+   }
+
+   to {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+   }
+}
+
+@keyframes vsAnim3 {
+   from {
+      filter: drop-shadow(0 0 .5rem transparent);
+      transform: translateX(5%) scale(.95);
+   }
+
+   to {
+      transform: translateX(0%) scale(1);
+      filter: drop-shadow(0 0 .5rem $color-vscode-active);
+   }
+}

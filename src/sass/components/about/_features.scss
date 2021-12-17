@@ -1,0 +1,48 @@
+.interests__list-container {
+   display: grid;
+   gap: .5rem;
+   grid-template-columns: repeat(5, 1fr);
+   grid-template-rows: minmax(25rem, 80vh);
+
+   .interests__item {
+      transition: .2s;
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+      background: $color-secondary;
+      overflow: hidden;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      p {
+         padding: 1rem;
+         width: 10rem;
+      }
+
+      &:nth-child(2n) {
+         flex-direction: column;
+      }
+
+      &:nth-child(2) {
+         img {
+            object-position: 37%;
+         }
+      }
+
+      &:nth-child(4) {
+         img {
+            object-position: 65%;
+         }
+      }
+
+      &:hover {
+         width: 130%;
+         transform: translateX(-15%);
+         z-index: 1;
+      }
+   }
+}

@@ -5,6 +5,7 @@ import Banner from "./Banner";
 import AboutMe from "./AboutMe";
 import MenuList from "./Menu/MenuList";
 import Skills from "./Skills";
+import Projects from "./Projects";
 
 const Index = () => {
   const body = useRef();
@@ -18,6 +19,7 @@ const Index = () => {
           <Banner />
           <AboutMe />
           <Skills />
+          <Projects />
         </div>
       </div>
     </>

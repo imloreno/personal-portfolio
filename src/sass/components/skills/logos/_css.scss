@@ -1,74 +1,84 @@
 .skills__logo--css {
-   .animated{
+   .animated {
       transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
       stroke: $color-css-active;
       opacity: 0;
       z-index: 2;
 
-      #cssLetter{
+      #cssLetter {
          transition: 1s;
          opacity: 0;
       }
    }
-   .bg-icon{
+
+   .bg-icon {
       stroke: $color-css;
       z-index: 1;
    }
 }
 
 //Text
-.color-css{
+.color-css {
    color: $color-css;
 }
 
 //When de animation is running
-.animation--on{
+.animation--on {
 
    .skills__logo--css {
-      .animated{
-      filter: drop-shadow(0 0 .1rem $color-css-active);
-      opacity: 1;
-      animation: cssAnim 3s infinite alternate cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      .animated {
+         filter: drop-shadow(0 0 .1rem $color-css-active);
+         opacity: 1;
+         animation: cssAnim 3s infinite alternate cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-      #cssLetter{
-         animation: cssAnim2 2.3s infinite;
-         opacity: 0;
-      }
+         #cssLetter {
+            animation: cssAnim2 2.3s infinite;
+            opacity: 0;
+         }
       }
    }
-   .color-css{
+
+   .color-css {
       color: $color-css-active;
    }
 }
+
 /*-------------------------------*/
 /* Animations */
 /*-------------------------------*/
 
 @keyframes cssAnim {
-   from{
+   from {
       filter: drop-shadow(0 0 .1rem $color-css-active);
    }
-   to{
+
+   to {
       filter: drop-shadow(0 0 .5rem $color-css-active);
    }
 }
+
 @keyframes cssAnim2 {
-   72%{
+   62% {
       opacity: 1;
    }
-   75%{
+
+   65% {
       opacity: 0;
    }
-   80%{
+
+   70% {
       opacity: 1;
    }
-   87%{
+
+   77% {
       opacity: 1;
    }
-   90%{
+
+   80% {
       opacity: 0;
    }
-   95%{
+
+   85% {
       opacity: 1;
    }
 }

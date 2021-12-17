@@ -1,0 +1,48 @@
+.skills__logo--github {
+   overflow: hidden;
+
+   .animated {
+      display: none;
+      stroke: $color-github;
+      transition: .5s;
+      opacity: 0;
+      z-index: 2;
+
+      #eyes {
+         fill: $color-github-active;
+      }
+   }
+
+   .bg-icon {
+      stroke: $color-github;
+      z-index: 1;
+
+      #eyes {
+         fill: $color-github;
+      }
+   }
+}
+
+//Text
+.color-github {
+   color: $color-github;
+}
+
+//When de animation is running
+.animation--on {
+   .skills__logo--github {
+      .animated {
+         display: block;
+         opacity: 1;
+         stroke: $color-github-active;
+      }
+
+      .bg-icon {
+         opacity: 0;
+      }
+   }
+
+   .color-github {
+      color: $color-github-active;
+   }
+}
