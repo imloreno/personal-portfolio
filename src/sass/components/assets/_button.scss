@@ -1,0 +1,39 @@
+.btn {
+   position: relative;
+   padding: .8rem 2rem;
+   border: none;
+   width: fit-content;
+   color: $color-text-b;
+   background: $color-extra-1;
+   will-change: transform;
+   cursor: pointer;
+   overflow: hidden;
+
+   .btn__text {
+      position: relative;
+      pointer-events: none;
+      z-index: 1;
+   }
+
+   &::after {
+      transition: .2s ease-out;
+      position: absolute;
+      content: '';
+      width: 10rem;
+      height: 10rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+      background: $color-main;
+      pointer-events: none;
+      will-change: transform;
+   }
+
+   &:hover {
+
+      &::after {
+         transform: translate(-50%, -50%) scale(1);
+      }
+   }
+}

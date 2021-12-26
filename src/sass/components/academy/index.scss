@@ -1,0 +1,118 @@
+.academy {
+   padding: 5rem 4rem;
+   background: $color-main;
+   will-change: transform;
+
+   .academy__header {
+      text-align: center;
+
+      .academy__title {
+         padding-bottom: .3rem;
+         margin: auto;
+         margin-bottom: .5rem;
+         width: fit-content;
+         color: $color-extra-1;
+         border-bottom: .1rem solid $color-extra-1;
+      }
+
+   }
+
+   .academy__content {
+      position: relative;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      margin-top: 5rem;
+
+      .academy__item {
+         position: relative;
+         padding: 2rem;
+         margin: auto;
+         width: 20rem;
+         color: $color-text;
+         background: $color-secondary;
+         transform: translateX(13rem);
+
+         .academy__item-header {
+            display: flex;
+            gap: .5rem;
+            flex-direction: column;
+
+            .academy__item-title {
+               text-decoration: underline;
+               text-transform: uppercase;
+               color: $color-extra-1;
+               font-size: 1.1rem;
+            }
+
+            .academy__reference {
+               font-size: .9em;
+               color: $color-extra-1;
+               opacity: .6;
+            }
+
+            .academy__item-li {
+               margin-top: 1rem;
+
+               li {
+                  display: flex;
+                  gap: .5rem;
+                  justify-content: flex-end;
+
+                  span {
+                     color: $color-extra-1;
+                  }
+               }
+            }
+         }
+
+         &::before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%);
+            border: 1rem solid transparent;
+            border-right: 1.5rem solid $color-secondary;
+         }
+
+         &::after {
+            position: absolute;
+            content: '';
+            width: .5rem;
+            height: .5rem;
+            border-radius: 50%;
+            top: 50%;
+            right: calc(100% + 2.75rem);
+            transform: translateY(-50%);
+            background: $color-extra-1;
+         }
+
+         &:nth-child(2n) {
+            transform: translateX(-13rem);
+            text-align: right;
+
+            &::before {
+               left: 100%;
+               border-left: 1.5rem solid $color-secondary;
+               border-right: none;
+            }
+
+            &::after {
+               left: calc(100% + 2.75rem);
+            }
+         }
+      }
+
+      &::before {
+         position: absolute;
+         content: "";
+         width: .1rem;
+         height: 100%;
+         top: 0;
+         left: 50%;
+         transform: translateX(-.05rem);
+         background: $color-extra-1;
+      }
+   }
+}

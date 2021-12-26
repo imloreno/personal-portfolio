@@ -6,8 +6,9 @@
    grid-template-rows: auto 1fr auto;
    width: 15rem;
    height: 100%;
-   background: $color-extra-1;
+   background: $color-main;
    z-index: 3;
+   will-change: transform;
 
    .menu__clock-container {
       margin: 2rem auto 0 auto;
@@ -43,9 +44,9 @@
          user-select: none;
 
          .icon-theme {
-            transition-delay: .12s;
+            transition-delay: .1s;
             transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            fill: #e0ae23;
+            fill: $color-text;
             transform: rotate(200deg);
          }
       }
@@ -56,8 +57,8 @@
    .menu__settings-icon {
 
       .icon-theme {
-         transition-delay: .12s;
-         fill: rgb(224, 174, 65);
+         transition-delay: .1s;
+         fill: #e2bd55 !important;
          transform: rotate(-350deg) !important;
       }
    }

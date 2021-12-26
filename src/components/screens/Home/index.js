@@ -6,6 +6,9 @@ import AboutMe from "./AboutMe";
 import MenuList from "./Menu/MenuList";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import Footer from "./Footer";
+import Academy from "./Academy";
+import Contact from "./Contact";
 
 const Index = () => {
   const body = useRef();
@@ -20,6 +23,9 @@ const Index = () => {
           <AboutMe />
           <Skills />
           <Projects />
+          <Academy />
+          <Contact />
+          <Footer />
         </div>
       </div>
     </>

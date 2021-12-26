@@ -13,7 +13,7 @@
 
 
 //-------------------------------BODY (menu switch event)
-.body{
+.body {
    transition: transform .8s cubic-bezier(0.5, 0, 0.2, 1);
    display: grid;
    grid-template-columns: 100% 15rem;
@@ -21,8 +21,9 @@
    height: 100vh;
    margin: 0;
    padding: 0;
+   will-change: transform;
 
-   &::after{
+   &::after {
       transition: .5s;
       position: fixed;
       content: '';
@@ -32,25 +33,24 @@
       right: 0;
       opacity: 0;
       pointer-events: none;
-      background: rgba(0,0,0,.3);
-      backdrop-filter: blur(2px);
+      background: rgba(0, 0, 0, .8);
+      backdrop-filter: blur(.2rem);
+      will-change: opacity;
       z-index: 3;
    }
 
-   .all-container{
+   .all-container {
       height: 100vh;
       overflow-y: auto;
-   } 
+   }
 
-   &__menu--active{
+   &__menu--active {
       transform: translateX(-15rem);
 
-      &::after{
+      &::after {
          opacity: 1;
          pointer-events: all;
       }
    }
 
 }
-
-

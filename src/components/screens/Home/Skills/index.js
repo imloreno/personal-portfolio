@@ -13,11 +13,14 @@ const Index = ({ iconList, theme }) => {
 
   return (
     <section className={`skills ${theme === "light" && "light-theme"}`}>
+      <header className="skills__title-container">
+        <h2 className="skills__title">Habilidades</h2>
+        <p className="skills__subtitle">
+          A la fecha, estas son mis habilidades .
+        </p>
+      </header>
       <div className="skills__container">
         <div className="skills_list-container">
-          <header className="skills__title-container">
-            <h2 className="skills__title">Habilidades</h2>
-          </header>
           <ul className="skills__list">
             {iconList.map((e, index) => (
               <li

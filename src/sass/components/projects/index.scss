@@ -2,9 +2,85 @@
    position: relative;
    color: $color-text;
    background: $color-secondary;
-   padding: 10rem 2rem;
+   padding: 15rem 4rem;
+   will-change: transform;
 
-   //Border bottom
+   .projects__header {
+      color: $color-extra-1;
+      margin-bottom: 4rem;
+
+      .projects__title {
+         width: fit-content;
+         border-bottom: .1rem solid $color-extra-1;
+         padding-bottom: .3rem;
+      }
+
+      .projects__paragraph {
+         margin-top: .5rem;
+         color: $color-text;
+      }
+   }
+
+   .projects__list {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+      margin: 2rem 0;
+
+      .projects__item {
+         background: $color-main;
+
+         .projects__item-img {
+            width: 100%;
+         }
+
+         .proyects__item-content {
+            position: relative;
+            display: grid;
+            gap: 1rem;
+            grid-template-rows: auto minmax(6rem, 1fr) auto;
+            padding: 0 2rem 1.5rem 2rem;
+            width: 100%;
+            color: $color-text-b;
+
+            .projects__svg {
+               position: absolute;
+               fill: $color-main;
+               width: 100%;
+               left: 0;
+               bottom: 100%;
+            }
+
+            .proyects__item-title {
+               font-size: 1.1rem;
+               font-weight: bold;
+               color: $color-extra-1;
+            }
+
+            .proyects__item-subtitle {
+               opacity: .6;
+            }
+
+            .projects__icons {
+               display: flex;
+               gap: 1rem;
+
+               li {
+                  font-size: 1.3rem;
+                  color: $color-extra-1;
+                  will-change: opacity;
+
+                  &:hover {
+                     opacity: .8;
+                  }
+               }
+            }
+         }
+      }
+
+   }
+
+   //Border top
    #skills__border-bottom {
       position: absolute;
       top: 0;
@@ -13,5 +89,20 @@
       fill: $color-main;
       transform: rotate(180deg);
       will-change: transform;
+   }
+
+   //Border bottom
+   .projects__separator {
+      margin-top: 8rem;
+      pointer-events: none;
+
+      #bottomSeparator {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         overflow: hidden;
+         fill: $color-main;
+      }
    }
 }

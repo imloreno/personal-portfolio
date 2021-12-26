@@ -24,7 +24,7 @@
       font-size: 10rem;
       word-spacing: 0rem;
       letter-spacing: 1rem;
-      color: $color-extra-1;
+      color: $color-text-b;
 
       .banner__title--bg {
          color: $color-secondary;
@@ -37,7 +37,7 @@
       font-size: 1.5rem;
       letter-spacing: 1rem;
       font-family: monospace;
-      color: $color-text-b;
+      color: $color-extra-1;
    }
 
    .banner__photo {
@@ -73,9 +73,6 @@
 /*----------------------------*/
 
 .light-theme {
-   .banner__title {
-      color: $color-text;
-   }
 
    .banner__photo-img {
       filter: brightness(1.2);

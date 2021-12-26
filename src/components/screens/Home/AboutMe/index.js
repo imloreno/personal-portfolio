@@ -8,6 +8,7 @@ import Img3 from "../../../../images/interests/profile-3.png";
 import Img4 from "../../../../images/interests/profile-5.png";
 import Img5 from "../../../../images/interests/profile-6.png";
 import Img7 from "../../../../images/interests/profile-8.png";
+import Buttons from "../../../assets/Buttons";
 
 const Index = ({ theme }) => {
   return (
@@ -24,7 +25,7 @@ const Index = ({ theme }) => {
           <br />
           Espero te guste!!
         </p>
-        <button className="about__button">Descargar CV</button>
+        <Buttons text="Descargar CV" className="" onClick={() => alert()} />
       </div>
       <div className="interests__container">
         <ul className="interests__list-container">
