@@ -67,3 +67,14 @@ a {
       transform: rotate(360deg);
    }
 }
+
+
+/*-------------------*/
+/* MEDIA QUERYES */
+/*-------------------*/
+
+@media screen and (max-width: $size3) {
+   .scroll::-webkit-scrollbar {
+      display: none;
+   }
+}

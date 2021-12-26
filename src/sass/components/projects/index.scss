@@ -28,7 +28,9 @@
       margin: 2rem 0;
 
       .projects__item {
+         position: relative;
          background: $color-main;
+         z-index: 1;
 
          .projects__item-img {
             width: 100%;
@@ -93,7 +95,6 @@
 
    //Border bottom
    .projects__separator {
-      margin-top: 8rem;
       pointer-events: none;
 
       #bottomSeparator {
@@ -104,5 +105,15 @@
          overflow: hidden;
          fill: $color-main;
       }
+   }
+}
+
+/*-------------------*/
+/* MEDIA QUERYES */
+/*-------------------*/
+
+@media screen and (max-width: $size5) {
+   .projects {
+      padding: 15rem 1.5rem;
    }
 }

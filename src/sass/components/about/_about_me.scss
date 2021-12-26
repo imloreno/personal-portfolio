@@ -223,3 +223,37 @@
     left: 0;
   }
 }
+
+/*-----------------------------*/
+/* MEDIA QUERYES */
+/*-----------------------------*/
+
+@media screen and (max-width: $size3) {
+  .about {
+    gap: 4rem;
+    grid-template-columns: 1fr;
+
+    .about__text {
+      grid-row: 2;
+    }
+
+    .interests__list-container {
+
+      .interests__item {
+        p {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $size5) {
+  .about {
+    padding: 10rem 1.5rem;
+
+    .interests__list-container {
+      grid-template-rows: 25rem;
+    }
+  }
+}

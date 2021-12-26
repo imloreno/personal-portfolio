@@ -3,17 +3,20 @@
 
 .contact {
    position: relative;
-   padding: 15rem 4rem;
+   padding: 4rem;
+   padding-top: 15rem;
    color: $color-text;
    background: $color-secondary;
    will-change: transform;
 
    .contact__content {
+      position: relative;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
       margin: auto;
       max-width: 900px;
+      z-index: 1;
 
       .contact__info {
 
@@ -41,7 +44,6 @@
       }
 
       .contact__form {
-         position: relative;
          display: flex;
          gap: 1rem;
          flex-direction: column;
@@ -127,5 +129,40 @@
       width: 100%;
       fill: $color-main;
       transform: rotate(180deg);
+   }
+}
+
+/*-------------------*/
+/* MEDIA QUERYES */
+/*-------------------*/
+
+@media screen and (max-width: $size3) {
+   .contact {
+      .contact__content {
+         gap: 4rem;
+         grid-template-columns: 1fr;
+      }
+   }
+}
+
+@media screen and (max-width: $size5) {
+   .contact {
+      padding: 1.5rem;
+      padding-top: 10rem;
+
+      .contact__content {
+         display: block;
+
+         .contact__info {
+            .contact__img {
+               height: 20rem;
+
+               #contact-svg {
+                  height: auto;
+                  width: 100%;
+               }
+            }
+         }
+      }
    }
 }
