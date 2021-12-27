@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ClockSvg from "./ClockSvg";
 import DarkThemeIcon from "./DarkThemeIcon";
-import { switchTheme } from "../../../../actions";
+import { switchTheme, switchMenuState } from "../../../../actions";
 
-const MenuList = ({ isActive, theme, switchTheme }) => {
+const MenuList = ({ isActive, theme, switchTheme, switchMenuState }) => {
   const handleTheme = () => {
     switchTheme(theme === "light" ? "dark" : "light");
   };
@@ -15,16 +15,31 @@ const MenuList = ({ isActive, theme, switchTheme }) => {
       <div className="menu__clock-container">
         <ClockSvg />
       </div>
-      <ul className="menu__list">
-        <Link to="/">
+      <ul className="menu__list" onClick={switchMenuState}>
+        <NavLink
+          to="/"
+          className={(e) => (e.isActive ? "menu__link--active" : "")}
+        >
           <li className="menu__item">inicio</li>
-        </Link>
-        <Link to="/">
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={(e) => (e.isActive ? "menu__link--active" : "")}
+        >
           <li className="menu__item">sobre mi</li>
-        </Link>
-        <Link to="/">
+        </NavLink>
+        <NavLink
+          to="/interactions"
+          className={(e) => (e.isActive ? "menu__link--active" : "")}
+        >
+          <li className="menu__item">interacciones</li>
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={(e) => (e.isActive ? "menu__link--active" : "")}
+        >
           <li className="menu__item">contacto</li>
-        </Link>
+        </NavLink>
       </ul>
       <div className="menu__settings">
         <div className="menu__settings-icon" onClick={handleTheme}>
@@ -40,7 +55,7 @@ const mapStateToProps = (store) => ({
   theme: store.theme,
 });
 
-const mapDispatchToProps = { switchTheme };
+const mapDispatchToProps = { switchTheme, switchMenuState };
 
 // export default MenuList;
 export default connect(mapStateToProps, mapDispatchToProps)(MenuList);

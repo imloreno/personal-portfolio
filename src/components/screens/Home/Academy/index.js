@@ -30,8 +30,8 @@ const Index = ({ theme }) => {
           <header className="academy__item-header">
             <h3 className="academy__item-title">Certificaciones</h3>
             <p className="academy__reference">UDEMY</p>
-            <p>2019 - infinite</p>
           </header>
+          <p>2019 - &infin; </p>
         </article>
         <article className="academy__item">
           <header className="academy__item-header">

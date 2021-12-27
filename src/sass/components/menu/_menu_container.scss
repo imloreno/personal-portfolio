@@ -26,8 +26,47 @@
       text-align: center;
 
       .menu__item {
+         position: relative;
          padding: .5rem 0;
+         width: 10rem;
          color: $color-text-b;
+         transition: .2s;
+
+         &::before,
+         &::after {
+            position: absolute;
+            content: '';
+            width: .5rem;
+            height: 1px;
+            top: 50%;
+            left: 0;
+            opacity: 0;
+            background: $color-extra-1;
+         }
+
+         &::after {
+            left: auto;
+            right: 0;
+         }
+
+         &:hover {
+            padding: 1rem 0;
+            color: $color-extra-1;
+
+
+         }
+      }
+
+      .menu__link--active {
+         .menu__item {
+            padding: 1rem 0;
+            color: $color-extra-1;
+
+            &::before,
+            &::after {
+               opacity: 1;
+            }
+         }
       }
    }
 
