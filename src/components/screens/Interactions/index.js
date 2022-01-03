@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { connect } from "react-redux";
 
-import Menu from "../Home/Menu";
-import MenuList from "../Home/Menu/MenuList";
+import Menu from "../../modules/Menu";
+import MenuList from "../../modules/Menu/MenuList";
 import Footer from "../Home/Footer";
 import WeatherInterface from "./WeatherInterface";
 import WeatherInteraction from "./WeatherInteraction";

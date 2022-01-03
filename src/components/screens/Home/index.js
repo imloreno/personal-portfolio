@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { useParams } from "react-router-dom";
 
-import Menu from "./Menu";
+import Menu from "../../modules/Menu";
 import Banner from "./Banner";
 import AboutMe from "./AboutMe";
-import MenuList from "./Menu/MenuList";
+import MenuList from "../../modules/Menu/MenuList";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Footer from "./Footer";
