@@ -15,16 +15,25 @@
       stroke-miterlimit: 10;
       fill: none;
       stroke-width: .25rem;
+      will-change: transform;
    }
 
    #minute {
       fill: none;
       stroke-width: .5rem;
+      will-change: transform;
    }
 
    #hour {
       fill: none;
       stroke-width: .8rem;
+      will-change: transform;
+   }
+
+   #second,
+   #minute,
+   #hour {
+      transform-origin: center;
    }
 
    #center {

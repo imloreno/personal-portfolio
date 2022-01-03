@@ -7,7 +7,7 @@ import ContactSvg from "./ContactSvg";
 import {
   faFacebook,
   faGithub,
-  faInstagram,
+  faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 
@@ -31,9 +31,6 @@ const Index = ({ theme }) => {
             </div>
           </div>
           <form action="/" className="contact__form" onSubmit={(e) => alert(e)}>
-            <header className="contact__form-header">
-              <h3 className="contact__title">Envíame un email</h3>
-            </header>
             <input
               type="text"
               className="contact__input"
@@ -63,9 +60,15 @@ const Index = ({ theme }) => {
                   <Icon icon={faFacebook} />
                 </li>
               </a>
-              {/* <li className="contact__social-icon">
-                <Icon icon={faInstagram} />
-              </li> */}
+              <a
+                href="https://api.whatsapp.com/send/?phone=59169141407&text=Hola"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <li className="contact__social-icon">
+                  <Icon icon={faWhatsapp} />
+                </li>
+              </a>
               <a
                 href="https://github.com/SoySanty"
                 target="_blank"

@@ -2,9 +2,11 @@
 /* THEME 1 */
 /*---------------------------*/
 @mixin theme_1 {
-   --color-main: #141414;
+   // --color-main: #141414;
+   --color-main: #111111;
    --color-text: #cdd3df;
    --color-secondary: #1b222e;
+   --color-secondary: #12171f;
    --color-extra-1: #db5c4b;
    --color-text-b: #ffffff;
    --color-link: #ffffff;
@@ -54,8 +56,8 @@
 /*---------------------------*/
 
 @mixin theme_2 {
-   --color-main: #0f1529;
-   // --color-main: #233558;
+   // --color-main: #1d1d1d;
+   --color-main: #1f0f44;
    --color-secondary: #e0dfdf;
    --color-text: #0f0f0f;
    --color-text-b: #ccd4d8;
@@ -63,7 +65,8 @@
 }
 
 @mixin theme_2--logos {
-   --colorLogo1: #a3587b;
+   // --colorLogo1: #a3587b;
+   --colorLogo1: #b94b5a;
    --colorLogo2: #000000;
    --color-html: var(--colorLogo1);
    --color-html-active: var(--colorLogo2);

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ClockSvg from "./ClockSvg";
 import DarkThemeIcon from "./DarkThemeIcon";
 import { switchTheme, switchMenuState } from "../../../../actions";
@@ -13,7 +13,7 @@ const MenuList = ({ isActive, theme, switchTheme, switchMenuState }) => {
   return (
     <div className={`menu__container ${theme === "light" && "light-theme"}`}>
       <div className="menu__clock-container">
-        <ClockSvg />
+        <ClockSvg isActive={isActive} />
       </div>
       <ul className="menu__list" onClick={switchMenuState}>
         <NavLink
@@ -28,11 +28,29 @@ const MenuList = ({ isActive, theme, switchTheme, switchMenuState }) => {
         >
           <li className="menu__item">sobre mi</li>
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/interactions"
           className={(e) => (e.isActive ? "menu__link--active" : "")}
         >
           <li className="menu__item">interacciones</li>
+        </NavLink> */}
+        <NavLink
+          to="/skills"
+          className={(e) => (e.isActive ? "menu__link--active" : "")}
+        >
+          <li className="menu__item">habilidades</li>
+        </NavLink>
+        <NavLink
+          to="/projects"
+          className={(e) => (e.isActive ? "menu__link--active" : "")}
+        >
+          <li className="menu__item">proyectos</li>
+        </NavLink>
+        <NavLink
+          to="/training"
+          className={(e) => (e.isActive ? "menu__link--active" : "")}
+        >
+          <li className="menu__item">Formación</li>
         </NavLink>
         <NavLink
           to="/contact"

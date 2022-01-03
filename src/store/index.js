@@ -28,8 +28,13 @@ const initialState = {
   menu: {
     state: false,
   },
-
   iconList: ICON_LIST,
+  session: {
+    fullname: "",
+    user: "",
+    token: "",
+    isLogged: false,
+  },
 };
 
 const store = createStore(reducer, initialState);

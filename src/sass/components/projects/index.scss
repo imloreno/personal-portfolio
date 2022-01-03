@@ -99,7 +99,7 @@
 
       #bottomSeparator {
          position: absolute;
-         bottom: 0;
+         bottom: -1px;
          left: 0;
          width: 100%;
          overflow: hidden;
@@ -111,6 +111,18 @@
 /*-------------------*/
 /* MEDIA QUERYES */
 /*-------------------*/
+
+@media screen and (max-width: $size4) {
+   .projects {
+      .projects__header {
+         text-align: center;
+
+         .projects__title {
+            margin: auto;
+         }
+      }
+   }
+}
 
 @media screen and (max-width: $size5) {
    .projects {

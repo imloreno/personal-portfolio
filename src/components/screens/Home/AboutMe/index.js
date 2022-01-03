@@ -25,12 +25,16 @@ const Index = ({ theme }) => {
           <br />
           Espero te guste!!
         </p>
-        <Buttons text="Descargar CV" className="" onClick={() => alert()} />
+        <Buttons
+          text="Descargar CV"
+          className="about__button"
+          onClick={() => alert()}
+        />
       </div>
       <div className="interests__container">
         <ul className="interests__list-container">
           <li className="interests__item">
-            <p>Naturaleza</p>
+            <p>Curiosidad</p>
             <img src={Img5} alt="Santiago Arias Villegas" />
           </li>
           <li className="interests__item">

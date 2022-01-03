@@ -1,6 +1,30 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 
-const ClockSvg = () => {
+const ClockSvg = ({ isActive }) => {
+  const [time, setTime] = useState({
+    hour: new Date().getHours(),
+    minutes: new Date().getMinutes(),
+    seconds: new Date().getSeconds(),
+  });
+
+  useEffect(() => {
+    if (isActive) {
+      const interval = setInterval(() => {
+        setTimeout(() => {
+          const DATE = new Date();
+          setTime({
+            hour: DATE.getHours(),
+            minutes: DATE.getMinutes(),
+            seconds: DATE.getSeconds(),
+          });
+        }, 200);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [isActive]);
+
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443.15 443.15">
       <g id="Layer_2" data-name="Layer 2">
@@ -39,6 +63,7 @@ const ClockSvg = () => {
             y1="66.39"
             x2="221.57"
             y2="274.11"
+            style={{ transform: `rotate(${6 * time.seconds}deg)` }}
           />
           <line
             id="minute"
@@ -47,6 +72,7 @@ const ClockSvg = () => {
             y1="266.89"
             x2="221.57"
             y2="83.47"
+            style={{ transform: `rotate(${6 * time.minutes}deg)` }}
           />
           <line
             id="hour"
@@ -55,6 +81,7 @@ const ClockSvg = () => {
             y1="256.11"
             x2="221.57"
             y2="111.54"
+            style={{ transform: `rotate(${30 * time.hour}deg)` }}
           />
           <path
             id="center"

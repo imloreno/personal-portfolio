@@ -3,6 +3,7 @@
    padding: .8rem 2rem;
    border: none;
    width: fit-content;
+   max-width: 12rem;
    color: $color-text-b;
    background: $color-extra-1;
    will-change: transform;
@@ -19,8 +20,8 @@
       transition: .2s ease-out;
       position: absolute;
       content: '';
-      width: 10rem;
-      height: 10rem;
+      width: 13rem;
+      height: 13rem;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(0);

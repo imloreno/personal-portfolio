@@ -26,11 +26,13 @@
             .contact__title {
                color: $color-extra-1;
                margin-bottom: .5rem;
+               width: fit-content;
+               border-bottom: thin solid $color-extra-1;
             }
          }
 
          .contact__img {
-            height: 20rem;
+            // height: 20rem;
 
             #contact-svg {
                height: 100%;
@@ -47,16 +49,9 @@
          display: flex;
          gap: 1rem;
          flex-direction: column;
+         justify-content: center;
          margin-left: auto;
          width: 100%;
-
-         .contact__form-header {
-
-            .contact__title {
-               color: $color-extra-1;
-               margin-bottom: .5rem;
-            }
-         }
 
          .contact__input,
          .contact__textarea {
@@ -141,6 +136,17 @@
       .contact__content {
          gap: 4rem;
          grid-template-columns: 1fr;
+
+         .contact__info {
+            .contact__info-header {
+               text-align: center;
+
+               .contact__title {
+                  margin: auto;
+                  margin-bottom: .5rem;
+               }
+            }
+         }
       }
    }
 }
@@ -151,15 +157,15 @@
       padding-top: 10rem;
 
       .contact__content {
-         display: block;
 
          .contact__info {
+
             .contact__img {
-               height: 20rem;
+               text-align: center;
 
                #contact-svg {
                   height: auto;
-                  width: 100%;
+                  width: 70%;
                }
             }
          }

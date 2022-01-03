@@ -1,0 +1,34 @@
+.interactions {
+   padding: 4rem 2rem;
+   min-height: 100vh;
+   color: $color-text;
+   background: $color-secondary;
+   will-change: transform;
+
+   .interactions__header {
+      margin-bottom: 2rem;
+
+      .interactions__title {
+         color: $color-extra-1;
+      }
+   }
+
+   .interactions__container {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 20rem 20rem 20rem;
+      justify-content: center;
+   }
+}
+
+.footer {
+   position: sticky;
+   top: 100%;
+}
+
+/*-------------------------*/
+/* IMPORTS */
+/*-------------------------*/
+@import "weatherSvg";
+@import "weather-interface";
+@import "weather-interaction";

@@ -61,3 +61,13 @@
    }
 
 }
+
+.light-theme {
+   .menu__logo {
+      stroke: $color-extra-1;
+   }
+
+   .menu__icon {
+      stroke: $color-extra-1;
+   }
+}

@@ -1,0 +1,19 @@
+.weather__interaction {
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+
+   .weather__search {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+
+      .form__search {
+
+         .search__box {
+            padding: .8rem 2rem;
+            border: none;
+            outline: none;
+         }
+      }
+   }
+}

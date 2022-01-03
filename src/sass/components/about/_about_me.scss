@@ -4,7 +4,7 @@
   display: grid;
   gap: 2rem;
   grid-template-columns: .5fr 1fr;
-  padding: 10rem 4rem;
+  padding: 5rem 4rem 10rem 4rem;
   color: $color-text;
   min-height: 80vh;
   background: $color-secondary;
@@ -233,14 +233,24 @@
     gap: 4rem;
     grid-template-columns: 1fr;
 
+    .about__title {
+      margin: auto;
+    }
+
     .about__text {
+      text-align: center;
       grid-row: 2;
+    }
+
+    .about__button {
+      margin: auto;
     }
 
     .interests__list-container {
 
       .interests__item {
         p {
+          padding: 0;
           opacity: 0;
         }
       }
@@ -250,9 +260,14 @@
 
 @media screen and (max-width: $size5) {
   .about {
-    padding: 10rem 1.5rem;
+    padding: 5rem 0 8rem 0;
+
+    .about__text {
+      padding: 0 2rem;
+    }
 
     .interests__list-container {
+      gap: 0;
       grid-template-rows: 25rem;
     }
   }

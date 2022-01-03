@@ -1,0 +1,96 @@
+.login {
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 2rem;
+   top: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+   background: $color-secondary;
+   user-select: none;
+
+   .login-content {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      width: 55rem;
+      background: $color-main;
+
+      .login__title {
+         transition: .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+         position: absolute;
+         top: 0;
+         width: 50%;
+         height: calc(100% + 4rem);
+         background: $color-main;
+         transform: translate(100%, -2rem);
+         z-index: 1;
+
+         .login__title-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            height: 100%;
+
+            .login__title-text {
+               color: $color-extra-1;
+               margin-bottom: .5rem;
+            }
+
+            .login__title-link {
+               color: $color-extra-1;
+               text-decoration: underline;
+               cursor: pointer;
+            }
+         }
+
+         &--login {
+            transform: translateY(-2rem);
+         }
+      }
+
+      .login__form {
+         padding: 2rem 4rem;
+         display: flex;
+         gap: .5rem;
+         flex-direction: column;
+         align-items: center;
+
+         .singin__image {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            font-size: .9em;
+            cursor: pointer;
+
+            .singin__profile {
+               width: 4rem;
+               height: 4rem;
+            }
+
+            .singin__profile-status {
+               opacity: .5;
+            }
+         }
+
+         .login__input {
+            padding: .8rem 2rem;
+            outline: none;
+            border: none;
+            background: transparent;
+            color: $color-text-b;
+            border-bottom: thin solid $color-text-b;
+            width: 100%;
+         }
+
+         .login__button {
+            margin-top: .5rem;
+         }
+      }
+   }
+}
