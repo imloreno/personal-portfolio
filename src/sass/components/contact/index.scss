@@ -69,6 +69,11 @@
             max-height: 12rem;
          }
 
+         .contact__alert {
+            font-size: .85rem;
+            color: $color-alert;
+         }
+
          .contact__social-icons {
             margin-top: 1rem;
             display: flex;

@@ -230,6 +230,9 @@
 
       .banner__title-contaniner {
          top: 50%;
+         width: 100%;
+         text-align: center;
+         margin: 0;
 
          .banner__title {
             font-size: 12vw;
@@ -238,6 +241,7 @@
 
          .banner__subtitle {
             font-size: 1rem;
+            padding: .5rem 2rem;
          }
       }
 
@@ -251,6 +255,11 @@
 
       .banner__reference {
          display: none;
+      }
+
+      .banner__showmore {
+         right: 2rem;
+         bottom: 2rem;
       }
 
       &::after {

@@ -29,6 +29,7 @@ const initialState = {
     state: false,
   },
   iconList: ICON_LIST,
+  projectList: [],
   session: {
     fullname: "",
     user: "",

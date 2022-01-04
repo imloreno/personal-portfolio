@@ -28,12 +28,6 @@ const MenuList = ({ isActive, theme, switchTheme, switchMenuState }) => {
         >
           <li className="menu__item">sobre mi</li>
         </NavLink>
-        {/* <NavLink
-          to="/interactions"
-          className={(e) => (e.isActive ? "menu__link--active" : "")}
-        >
-          <li className="menu__item">interacciones</li>
-        </NavLink> */}
         <NavLink
           to="/skills"
           className={(e) => (e.isActive ? "menu__link--active" : "")}
@@ -58,6 +52,15 @@ const MenuList = ({ isActive, theme, switchTheme, switchMenuState }) => {
         >
           <li className="menu__item">contacto</li>
         </NavLink>
+
+        {/* <hr />
+
+        <NavLink
+          to="/interactions"
+          className={(e) => (e.isActive ? "menu__link--active" : "")}
+        >
+          <li className="menu__item">interacciones ( API )</li>
+        </NavLink> */}
       </ul>
       <div className="menu__settings">
         <div className="menu__settings-icon" onClick={handleTheme}>

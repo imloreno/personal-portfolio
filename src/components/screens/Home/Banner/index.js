@@ -9,6 +9,7 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import Image from "../../../../images/profile-a.png";
+import SignatureSvg from "./SignatureSvg";
 
 const Index = (props) => {
   const { theme, scroll } = props;
@@ -56,6 +57,9 @@ const Index = (props) => {
         >
           <Icon icon={faTwitter} />
         </a>
+      </div>
+      <div className="signature">
+        <SignatureSvg />
       </div>
       <div className="banner__showmore" onClick={scroll}>
         <p className="banner__showmore-text">VER MÁS</p>

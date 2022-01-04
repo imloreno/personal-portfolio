@@ -81,7 +81,12 @@ const ClockSvg = ({ isActive }) => {
             y1="256.11"
             x2="221.57"
             y2="111.54"
-            style={{ transform: `rotate(${30 * time.hour}deg)` }}
+            style={{
+              transform: `rotate(${
+                30 * time.hour + ((100 / 60) * time.minutes * 30) / 100
+              }deg)`,
+            }}
+            //360 / 100 * minutes * { 30 }
           />
           <path
             id="center"

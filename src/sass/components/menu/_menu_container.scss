@@ -9,6 +9,7 @@
    background: $color-main;
    z-index: 3;
    will-change: transform;
+   overflow-y: auto;
 
    .menu__clock-container {
       margin: 2rem auto 0 auto;
@@ -27,7 +28,7 @@
 
       .menu__item {
          position: relative;
-         padding: .5rem 0;
+         padding: .8rem 0;
          width: 10rem;
          color: $color-text-b;
          transition: .2s;
@@ -85,6 +86,7 @@
             transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             fill: $color-text;
             transform: rotate(200deg);
+            will-change: transform;
          }
       }
    }

@@ -9,4 +9,10 @@ const switchTheme = (payload) => ({
   payload,
 });
 
-export { switchMenuState, switchTheme };
+//Set projects list
+const setProjectList = (payload) => ({
+  type: "SET_PROJECT_LIST",
+  payload,
+});
+
+export { switchMenuState, switchTheme, setProjectList };

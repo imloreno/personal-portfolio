@@ -15,6 +15,12 @@ const reducer = (state, action) => {
         theme: action.payload,
       };
     }
+    case "SET_PROJECT_LIST": {
+      return {
+        ...state,
+        projectList: action.payload,
+      };
+    }
     default:
       return state;
   }

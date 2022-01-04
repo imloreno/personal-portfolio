@@ -1,0 +1,75 @@
+.signature {
+   position: absolute;
+   width: 12rem;
+   bottom: 5rem;
+   right: 18%;
+
+   #signature {
+
+      #main,
+      #secondary {
+         fill: none;
+         stroke: $color-text-b;
+         stroke-linecap: round;
+         stroke-linejoin: round;
+         stroke-width: .5px;
+      }
+
+      #main {
+         stroke-dasharray: 212;
+         stroke-dashoffset: 60;
+         animation: main 2s linear;
+
+      }
+
+      #secondary {
+         stroke-dasharray: 510;
+         stroke-dashoffset: 260;
+         animation: secondary 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      }
+   }
+}
+
+/*-------------------------------*/
+/* ANIMATIONS */
+/*-------------------------------*/
+
+@keyframes main {
+   from {
+      stroke-dashoffset: 220;
+   }
+
+   to {
+      stroke-dashoffset: 60;
+   }
+}
+
+@keyframes secondary {
+   from {
+      stroke-dasharray: 257;
+   }
+
+   to {
+      stroke-dasharray: 510;
+   }
+}
+
+/*-------------------------------*/
+/* MEDUA QUERYES */
+/*-------------------------------*/
+
+@media screen and (max-width: $size3) {
+   .signature {
+      bottom: 2rem;
+      right: 4rem;
+   }
+}
+
+@media screen and (max-width: $size5) {
+   .signature {
+      width: 8rem;
+      bottom: 3rem;
+      right: 50%;
+      transform: translateX(50%);
+   }
+}
